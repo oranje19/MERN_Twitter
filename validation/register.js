@@ -7,7 +7,7 @@ module.exports = function validateRegisterInput(data) {
     data.handle = validText(data.handle) ? data.handle : '';
     data.email = validText(data.email) ? data.email : '';
     data.password = validText(data.password) ? data.password : '';
-    data.password2 = calidText(data.password2) ? data.password2 : '';
+    data.password2 = validText(data.password2) ? data.password2 : '';
 
     if (!Validator.isLength(data.handle, { min: 2, max: 30 })) {
         errors.handle = 'Handle must be between 2 and 30 characters';
