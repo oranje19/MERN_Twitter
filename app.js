@@ -6,14 +6,15 @@ const users = require("./routes/api/users");
 const tweets = require("./routes/api/tweets");
 const bodyParser = require('body-parser');
 const passport = require('passport');
+
 const path = require('path');
 
-// if (process.env.NODE_ENV === "production") {
-//   applicationCache.use(express.static("frontend/build"));
-//   applicationCache.get("/", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
-//   });
-// }
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("frontend/build"));
+    app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
 
 mongoose
     .connect(db, { userNewUrlParser: true })
