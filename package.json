@@ -1,8 +1,8 @@
 {
   "name": "mern_twitter",
   "version": "1.0.0",
-  "description": "A Twitter clone built with MERN stack",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "server": "nodemon app.js",
@@ -11,7 +11,8 @@
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "Jason Wintery",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
